@@ -12,6 +12,11 @@ namespace MovieService1
     {
         public static void Register(HttpConfiguration config)
         {
+
+
+            // Web API routes
+            config.MapHttpAttributeRoutes();
+
             // Web API configuration and services
             ODataModelBuilder builder = new ODataConventionModelBuilder();
             //Creates and Entity Data Model
@@ -22,8 +27,7 @@ namespace MovieService1
                 routePrefix: null,
                 model: builder.GetEdmModel());
 
-            // Web API routes
-            config.MapHttpAttributeRoutes();
+           
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
