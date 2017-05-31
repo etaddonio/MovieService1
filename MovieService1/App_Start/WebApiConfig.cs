@@ -21,6 +21,7 @@ namespace MovieService1
             ODataModelBuilder builder = new ODataConventionModelBuilder();
             //Creates and Entity Data Model
             builder.EntitySet<Movie>("Movies");
+            builder.EntitySet<FilmProfessional>("Film Professional");
             //adds a route
             config.MapODataServiceRoute(
                 routeName: "ODataRoute",

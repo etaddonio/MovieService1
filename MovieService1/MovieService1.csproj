@@ -151,8 +151,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\FilmProfessional.cs" />
+    <Compile Include="Models\Gender.cs" />
+    <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\Jobs.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\MovieContext.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +179,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{d92ae519-0ffa-45f5-b0e6-295ab11c6ca1}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
