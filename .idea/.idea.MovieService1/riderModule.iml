@@ -2,8 +2,8 @@
 <module type="RIDER_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$/../..">
-      <sourceFolder url="file://$MODULE_DIR$/../../MovieApp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../MovieService1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../ODataHelper" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../packages/Microsoft.Net.Compilers.1.0.0/tools/csc.exe" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../packages/Microsoft.Net.Compilers.1.0.0/tools/Microsoft.Build.Tasks.CodeAnalysis.dll" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../packages/Microsoft.Net.Compilers.1.0.0/tools/Microsoft.CodeAnalysis.CSharp.dll" isTestSource="false" />
@@ -16,13 +16,10 @@
       <sourceFolder url="file://$MODULE_DIR$/../../packages/Microsoft.Net.Compilers.1.0.0/tools/vbc.exe" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../packages/Microsoft.Net.Compilers.1.0.0/tools/VBCSCompiler.exe" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../packages/Microsoft.Net.Compilers.1.0.0/tools/VBCSCompiler.exe.config" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../Utilities" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/../../MovieApp/bin" />
-      <excludeFolder url="file://$MODULE_DIR$/../../MovieApp/obj" />
       <excludeFolder url="file://$MODULE_DIR$/../../MovieService1/bin" />
       <excludeFolder url="file://$MODULE_DIR$/../../MovieService1/obj" />
-      <excludeFolder url="file://$MODULE_DIR$/../../Utilities/bin" />
-      <excludeFolder url="file://$MODULE_DIR$/../../Utilities/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../../ODataHelper/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../../ODataHelper/obj" />
       <excludeFolder url="file://$MODULE_DIR$/../../packages" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
