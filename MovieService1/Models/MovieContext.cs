@@ -22,7 +22,7 @@ namespace MovieService1.Models
             
         }
         //add Db sets to the Context class so that Entity Framework 
-        //will include the Movies and 
+        //will include the Movies and FilmProfessional
         public DbSet<Movie> Movies { get; set; }
         public DbSet<FilmProfessional> FilmProfessional { get; set; }
 
