@@ -219,7 +219,7 @@ namespace ODataHelper
         protected IHttpActionResult OnDelete(int key)
         {
             if (!Initialized) return NotFound();
-            var entity = DeleteOperation(key, DbSet);
+            var entity = DeleteOperation(key, DbContext);
             if (entity == null) return NotFound();
             DbSet.Remove(entity);
             DbContext.SaveChanges();
@@ -249,8 +249,8 @@ namespace ODataHelper
         /// Return the entity with the given key, if it exists.
         /// </summary>
         /// <param name="key">Key</param>
-        /// <param name="dbSet">Database Set</param>
+        /// <param name="dbContext">Database Context</param>
         /// <returns>Entity</returns>
-        protected abstract T1 DeleteOperation(int key, DbSet<T1> dbSet);
+        protected abstract T1 DeleteOperation(int key, T2 dbContext);
     }
 }

@@ -1,10 +1,10 @@
-using System.Data.Entity;
 using System.Linq;
 using System.Web.Http;
 using System.Web.OData;
 using System.Web.OData.Routing;
+using ODataHelper;
 
-namespace ODataHelper.Example_Project
+namespace Example
 {
     public class ExampleController : ControllerBase<ExampleModel, ExampleContext>
     {
@@ -32,16 +32,16 @@ namespace ODataHelper.Example_Project
             return OnGetProperty(key);
         }
 
-        protected override ExampleModel DeleteOperation(int key, DbSet<ExampleModel> dbSet)
+        protected override ExampleModel DeleteOperation(int key, ExampleContext exampleContext)
         {
             //Find the entity within the given database set
-            var removeExampleModel = dbSet.Include("Collection").FirstOrDefault(e => e.Key == key);
+            var removeExampleModel = exampleContext.ExampleModels.Include("Collection").FirstOrDefault(e => e.Key == key);
             
             //Return null if no entity exists
             if (removeExampleModel == null) return null;
             
             //Find all references to this entity
-            var exampleModels = dbSet.Include("Collection")
+            var exampleModels = exampleContext.ExampleModels.Include("Collection")
                 .Where(c => c.Collection.Select(e => e.Key).AsQueryable().Contains(key)).ToList();
             
             //Remove entity from those locations
@@ -53,7 +53,7 @@ namespace ODataHelper.Example_Project
             //Return the entity
             return removeExampleModel;
             
-            // *** DO NOT REMOVE THE ENTITY FROM THE DATABASE SET OR MODIFY THE DATABASE SET IN ANY WAY ***
+            // *** DO NOT REMOVE THE ENTITY FROM THE DATABASE CONTEXT OR MODIFY THE DATABASE CONTEXT IN ANY WAY ***
         }
 
         //Gets the property 'Collection' from the given exampleModel object.

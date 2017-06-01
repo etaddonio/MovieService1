@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using ODataHelper;
 
-namespace ODataHelper.Example_Project
+namespace Example
 {
     public class ExampleModel : ModelBase
     {

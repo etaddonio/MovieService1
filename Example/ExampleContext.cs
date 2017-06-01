@@ -1,6 +1,6 @@
 using System.Data.Entity;
 
-namespace ODataHelper.Example_Project
+namespace Example
 {
     public class ExampleContext : DbContext
     {
