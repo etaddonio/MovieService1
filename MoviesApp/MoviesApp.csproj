@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D592F702-315F-4EE0-9722-0FC039441CB5}</ProjectGuid>
+    <ProjectGuid>{1E1262AC-736C-4E2F-BAD0-9133362DE0D6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MovieApp</RootNamespace>
-    <AssemblyName>MovieApp</AssemblyName>
+    <RootNamespace>MoviesApp</RootNamespace>
+    <AssemblyName>MoviesApp</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -64,29 +64,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MovieClient.tt</DependentUpon>
     </Compile>
-    <Compile Include="MovieService1\Models.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="MovieClient.ttinclude" />
-    <None Include="MovieClient1.ttinclude" />
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ProductClient.odata.config">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MovieClient.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MovieClient.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

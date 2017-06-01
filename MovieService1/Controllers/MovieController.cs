@@ -12,7 +12,7 @@ using System.Data.Entity.Infrastructure;
 
 
 namespace MovieService1.Controllers
-{
+{//Stephanie's original version
     public class MovieController: ODataController
     {
         //this controller uses the MoviesContext class to access
@@ -61,6 +61,8 @@ namespace MovieService1.Controllers
             await db.SaveChangesAsync();
             return Created(movie);
         }
+
+
 
         //This is letting the client update an entry 
         public async Task<IHttpActionResult> Patch([FromODataUri] int key, Delta<Movie> movie)

@@ -97,10 +97,8 @@ namespace Utilities
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        protected IHttpActionResult OnGetCollection([FromODataUri] int key)
-        {
-            
-        }
+        //protected IHttpActionResult OnGetCollection([FromODataUri] int key)
+       //{}
 
         protected abstract T1 DeleteOperation([FromODataUri] int key, DbSet<T1> dbSet);
     }
