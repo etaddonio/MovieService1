@@ -19,10 +19,9 @@ namespace MovieService1
 
             // Web API configuration and services
             ODataModelBuilder builder = new ODataConventionModelBuilder();
-          
             //Creates and Entity Data Model
             builder.EntitySet<Movie>("Movies");
-            builder.EntitySet<FilmProfessional>("FilmProfessional");
+            builder.EntitySet<FilmProfessional>("Film Professional");
             //adds a route
             config.MapODataServiceRoute(
                 routeName: "ODataRoute",

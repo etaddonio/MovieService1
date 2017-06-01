@@ -20,7 +20,7 @@ namespace MovieService1.Controllers
         MovieContext db = new MovieContext();
         private bool MovieExists(int key)
         {
-            return db.Movies.Any(p => p.Id == key);
+            return db.Movies.Any(p => p.Key == key);
         }
         //this is the starting point for the controller.
         protected  override void Dispose(bool disposing)
@@ -45,7 +45,7 @@ namespace MovieService1.Controllers
             //key parameter looks up a product by its key (in this 
             //case, the Id property).
 
-            IQueryable<Movie> result = db.Movies.Where(p => p.Id == key);
+            IQueryable<Movie> result = db.Movies.Where(p => p.Key == key);
             return SingleResult.Create(result);
         }
 
